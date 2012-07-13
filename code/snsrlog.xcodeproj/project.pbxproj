@@ -218,8 +218,8 @@
 		B502489D1323CDCE000EE4B8 /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Listener.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B50248BB1323D321000EE4B8 /* ConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleLogger.h; sourceTree = "<group>"; };
 		B50248BC1323D321000EE4B8 /* ConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleLogger.m; sourceTree = "<group>"; };
-		B50248C41323E310000EE4B8 /* AbstractSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractSensor.h; sourceTree = "<group>"; };
-		B50248C51323E310000EE4B8 /* AbstractSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSensor.m; sourceTree = "<group>"; };
+		B50248C41323E310000EE4B8 /* AbstractSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AbstractSensor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		B50248C51323E310000EE4B8 /* AbstractSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AbstractSensor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B5057BE815B0AF2A00EF6395 /* snsrlogAppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "snsrlogAppStore-Info.plist"; sourceTree = "<group>"; };
 		B50CF6EE1338D8FF003F6725 /* WiFiScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiScanner.h; sourceTree = "<group>"; };
 		B50CF6EF1338D8FF003F6725 /* WiFiScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiScanner.m; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		B5525D121386B78800EB93DB /* WiFiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiView.h; sourceTree = "<group>"; };
 		B5525D131386B78A00EB93DB /* WiFiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiView.m; sourceTree = "<group>"; };
 		B554580F13DF4A2400EE8C7E /* AccelerometerAndGyroscopeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AccelerometerAndGyroscopeView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		B554581013DF4A2500EE8C7E /* AccelerometerAndGyroscopeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerAndGyroscopeView.m; sourceTree = "<group>"; };
+		B554581013DF4A2500EE8C7E /* AccelerometerAndGyroscopeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AccelerometerAndGyroscopeView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B555533D138165FA00BAAC0A /* AudioLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioLevelMeter.h; sourceTree = "<group>"; };
 		B555533E138165FA00BAAC0A /* AudioLevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioLevelMeter.m; sourceTree = "<group>"; };
 		B56133F2137C2AE200E40DE6 /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LiveViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -303,7 +303,7 @@
 		B57A6A9513C495A4008BB675 /* StreamingLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingLiveViewController.h; sourceTree = "<group>"; };
 		B57A6A9613C495A4008BB675 /* StreamingLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingLiveViewController.m; sourceTree = "<group>"; };
 		B586069413DD8E8F00CACEA1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		B5B3845E15AEFF79004D8DC6 /* AddLabelPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddLabelPopupViewController.h; sourceTree = "<group>"; };
+		B5B3845E15AEFF79004D8DC6 /* AddLabelPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AddLabelPopupViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B5B3845F15AEFF79004D8DC6 /* AddLabelPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddLabelPopupViewController.m; sourceTree = "<group>"; };
 		B5B3846015AEFF79004D8DC6 /* AddLabelPopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddLabelPopupViewController.xib; sourceTree = "<group>"; };
 		B5B45DB113B8CF400062CE4C /* RecordingsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingsDetailViewController.h; sourceTree = "<group>"; };
@@ -314,8 +314,8 @@
 		B5B5F5B813938CCE0053FD23 /* LockScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockScreenViewController.h; sourceTree = "<group>"; };
 		B5B5F5B913938CCE0053FD23 /* LockScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockScreenViewController.m; sourceTree = "<group>"; };
 		B5B5F5BA13938CCE0053FD23 /* LockScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LockScreenViewController.xib; sourceTree = "<group>"; };
-		B5B82C4A132508B5005D432D /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accelerometer.h; sourceTree = "<group>"; };
-		B5B82C4B132508B5005D432D /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accelerometer.m; sourceTree = "<group>"; };
+		B5B82C4A132508B5005D432D /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Accelerometer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		B5B82C4B132508B5005D432D /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Accelerometer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B5B82C7313251271005D432D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		B5B8E09813BF2D2E006C44AB /* StreamingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingMainViewController.h; sourceTree = "<group>"; };
 		B5B8E09913BF2D2E006C44AB /* StreamingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingMainViewController.m; sourceTree = "<group>"; };
