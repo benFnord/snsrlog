@@ -1,6 +1,6 @@
 //
 //  WiFiView.m
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 20.05.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

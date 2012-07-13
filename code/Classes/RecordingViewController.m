@@ -1,6 +1,6 @@
 //
 //  RecordingViewController.m
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 24.05.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
@@ -14,7 +14,7 @@
 #import "CompassAndGPS.h"
 #import "AudioInput.h"
 #import "Preferences.h"
-#import "iPhoneLoggerAppDelegate.h"
+#import "snsrlogAppDelegate.h"
 
 #ifndef APP_STORE
     #import "WiFiScanner.h"
@@ -186,7 +186,7 @@
         [fileWriter startRecording];
 
         //prevent the device from sleeping and activate the proximity sensor (which also turns off the display)
-        iPhoneLoggerAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        snsrlogAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
         [appDelegate preventAutoLock:YES];
         [appDelegate enableProximitySensing:YES];
         
@@ -207,7 +207,7 @@
         addLabelButton.enabled = YES;
         
         //allow the device to auto-lock itself again and disable proximity sensing
-        iPhoneLoggerAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        snsrlogAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
         [appDelegate preventAutoLock:NO];
         [appDelegate enableProximitySensing:NO];
         

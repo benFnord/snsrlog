@@ -1,6 +1,6 @@
 //
 //  BTFancyButton.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 06.12.11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.

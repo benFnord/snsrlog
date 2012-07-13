@@ -1,12 +1,12 @@
 //
-//  iPhoneLoggerAppDelegate.m
-//  iPhoneLogger
+//  snsrlogAppDelegate.m
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 06.03.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "iPhoneLoggerAppDelegate.h"
+#import "snsrlogAppDelegate.h"
 #import "AudioInput.h"
 #import "Accelerometer.h"
 #import "Gyroscope.h"
@@ -18,7 +18,7 @@
     #import "WiFiScanner.h"
 #endif
 
-@implementation iPhoneLoggerAppDelegate
+@implementation snsrlogAppDelegate
 
 @synthesize window;
 

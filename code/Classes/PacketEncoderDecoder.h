@@ -1,6 +1,6 @@
 //
 //  PacketEncoderDecoder.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 23.04.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
@@ -10,7 +10,7 @@
 #import <CoreMotion/CMMotionManager.h>
 
 //Bonjour-name of the service advertised
-#define SESSIONID @"contextlogger"
+#define SESSIONID @"snsrlog"
 
 typedef enum {
 	

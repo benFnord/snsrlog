@@ -1,6 +1,6 @@
 //
 //  RecordingsDetailViewController.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 27.06.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

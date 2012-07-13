@@ -1,6 +1,6 @@
 //
 //  CompassView.m
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 16.05.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

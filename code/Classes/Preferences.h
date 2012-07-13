@@ -1,13 +1,13 @@
 //
 //  Preferences.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 10.03.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 #import <Foundation/Foundation.h>
 
-#define MY_PRODUCT_NAME @"iPhone Logger"
+#define MY_PRODUCT_NAME @"snsrlog"
 
 // ########################### AUDIO RECORDING ##################################
 #define USE_SOUNDBITS 0

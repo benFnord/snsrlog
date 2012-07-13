@@ -1,6 +1,6 @@
 //
 //  FileWriter.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 14.03.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

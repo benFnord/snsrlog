@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D3623260D0F684500981E51 /* iPhoneLoggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPhoneLoggerAppDelegate.m */; };
+		1D3623260D0F684500981E51 /* snsrlogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* snsrlogAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -23,7 +23,7 @@
 		B52FD11C149111C800B31EB1 /* RecordingsFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B45DB613BA078B0062CE4C /* RecordingsFileViewController.xib */; };
 		B52FD11D149111C800B31EB1 /* StreamingMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B8E09A13BF2D2E006C44AB /* StreamingMainViewController.xib */; };
 		B52FD12C149111C800B31EB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		B52FD12D149111C800B31EB1 /* iPhoneLoggerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iPhoneLoggerAppDelegate.m */; };
+		B52FD12D149111C800B31EB1 /* snsrlogAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* snsrlogAppDelegate.m */; };
 		B52FD12E149111C800B31EB1 /* ConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B50248BC1323D321000EE4B8 /* ConsoleLogger.m */; };
 		B52FD12F149111C800B31EB1 /* AbstractSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = B50248C51323E310000EE4B8 /* AbstractSensor.m */; };
 		B52FD130149111C800B31EB1 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B82C4B132508B5005D432D /* Accelerometer.m */; };
@@ -206,26 +206,26 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* iPhoneLoggerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneLoggerAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* iPhoneLoggerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = iPhoneLoggerAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D6058910D05DD3D006BFB54 /* iPhoneLoggerESL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneLoggerESL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D3623240D0F684500981E51 /* snsrlogAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snsrlogAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* snsrlogAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = snsrlogAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1D6058910D05DD3D006BFB54 /* snsrlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snsrlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* iPhoneLogger_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneLogger_Prefix.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* iPhoneLogger-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iPhoneLogger-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* snsrlog_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snsrlog_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* snsrlog-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "snsrlog-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B502489D1323CDCE000EE4B8 /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Listener.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B50248BB1323D321000EE4B8 /* ConsoleLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsoleLogger.h; sourceTree = "<group>"; };
 		B50248BC1323D321000EE4B8 /* ConsoleLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsoleLogger.m; sourceTree = "<group>"; };
 		B50248C41323E310000EE4B8 /* AbstractSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractSensor.h; sourceTree = "<group>"; };
 		B50248C51323E310000EE4B8 /* AbstractSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractSensor.m; sourceTree = "<group>"; };
+		B5057BE815B0AF2A00EF6395 /* snsrlogAppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "snsrlogAppStore-Info.plist"; sourceTree = "<group>"; };
 		B50CF6EE1338D8FF003F6725 /* WiFiScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiScanner.h; sourceTree = "<group>"; };
 		B50CF6EF1338D8FF003F6725 /* WiFiScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiScanner.m; sourceTree = "<group>"; };
 		B51ED855138156F800BB0684 /* GPSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSView.h; sourceTree = "<group>"; };
 		B51ED856138156F800BB0684 /* GPSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSView.m; sourceTree = "<group>"; };
-		B52FD15D149111C800B31EB1 /* iPhoneLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B52FD160149111C900B31EB1 /* iPhoneLoggerAppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iPhoneLoggerAppStore-Info.plist"; path = "/Users/ben/iphonelogger4/code/iPhoneLoggerAppStore-Info.plist"; sourceTree = "<absolute>"; };
+		B52FD15D149111C800B31EB1 /* snsrlogAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snsrlogAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53551FA135B257800D2CACF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B542DC5B13B3728B0057FF5E /* ArchiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveViewController.h; sourceTree = "<group>"; };
 		B542DC5C13B3728B0057FF5E /* ArchiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveViewController.m; sourceTree = "<group>"; };
@@ -393,8 +393,8 @@
 				B54E8AD61365B23B0010467E /* Streaming */,
 				B502489C1323CCD3000EE4B8 /* Listeners */,
 				B502489B1323CCC9000EE4B8 /* Sensors */,
-				1D3623240D0F684500981E51 /* iPhoneLoggerAppDelegate.h */,
-				1D3623250D0F684500981E51 /* iPhoneLoggerAppDelegate.m */,
+				1D3623240D0F684500981E51 /* snsrlogAppDelegate.h */,
+				1D3623250D0F684500981E51 /* snsrlogAppDelegate.m */,
 				B5D1712D1329044500A8EF72 /* Preferences.h */,
 				B5D1712E1329044500A8EF72 /* Preferences.m */,
 			);
@@ -404,8 +404,8 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* iPhoneLoggerESL.app */,
-				B52FD15D149111C800B31EB1 /* iPhoneLogger.app */,
+				1D6058910D05DD3D006BFB54 /* snsrlog.app */,
+				B52FD15D149111C800B31EB1 /* snsrlogAS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,7 +420,6 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				B5C3C0C01493A269004BBC15 /* AppStoreSettingsBundle */,
 				B5CDCFD313AA47FE00B0FE35 /* Settings.bundle */,
-				B52FD160149111C900B31EB1 /* iPhoneLoggerAppStore-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -428,7 +427,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* iPhoneLogger_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* snsrlog_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
@@ -447,7 +446,8 @@
 				B555536C1381698000BAAC0A /* AudioLevelMeter */,
 				B56133F8137C2F7E00E40DE6 /* Icons */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				8D1107310486CEB800E47090 /* iPhoneLogger-Info.plist */,
+				8D1107310486CEB800E47090 /* snsrlog-Info.plist */,
+				B5057BE815B0AF2A00EF6395 /* snsrlogAppStore-Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -669,9 +669,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* iPhoneLogger */ = {
+		1D6058900D05DD3D006BFB54 /* snsrlog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneLogger" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "snsrlog" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -681,9 +681,9 @@
 			);
 			dependencies = (
 			);
-			name = iPhoneLogger;
+			name = snsrlog;
 			productName = iPhoneLogger;
-			productReference = 1D6058910D05DD3D006BFB54 /* iPhoneLoggerESL.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* snsrlog.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B52FD0F4149111C800B31EB1 /* AppStore */ = {
@@ -700,7 +700,7 @@
 			);
 			name = AppStore;
 			productName = iPhoneLogger;
-			productReference = B52FD15D149111C800B31EB1 /* iPhoneLogger.app */;
+			productReference = B52FD15D149111C800B31EB1 /* snsrlogAS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -711,7 +711,7 @@
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneLogger" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "snsrlog" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -725,7 +725,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* iPhoneLogger */,
+				1D6058900D05DD3D006BFB54 /* snsrlog */,
 				B52FD0F4149111C800B31EB1 /* AppStore */,
 			);
 		};
@@ -860,7 +860,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
-				1D3623260D0F684500981E51 /* iPhoneLoggerAppDelegate.m in Sources */,
+				1D3623260D0F684500981E51 /* snsrlogAppDelegate.m in Sources */,
 				B50248BD1323D321000EE4B8 /* ConsoleLogger.m in Sources */,
 				B50248C61323E310000EE4B8 /* AbstractSensor.m in Sources */,
 				B5B82C4C132508B5005D432D /* Accelerometer.m in Sources */,
@@ -901,7 +901,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52FD12C149111C800B31EB1 /* main.m in Sources */,
-				B52FD12D149111C800B31EB1 /* iPhoneLoggerAppDelegate.m in Sources */,
+				B52FD12D149111C800B31EB1 /* snsrlogAppDelegate.m in Sources */,
 				B52FD12E149111C800B31EB1 /* ConsoleLogger.m in Sources */,
 				B52FD12F149111C800B31EB1 /* AbstractSensor.m in Sources */,
 				B52FD130149111C800B31EB1 /* Accelerometer.m in Sources */,
@@ -949,11 +949,11 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iPhoneLogger_Prefix.pch;
+				GCC_PREFIX_HEADER = snsrlog_Prefix.pch;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "iPhoneLogger-Info.plist";
+				INFOPLIST_FILE = "snsrlog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = iPhoneLoggerESL;
+				PRODUCT_NAME = snsrlog;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
@@ -967,11 +967,11 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iPhoneLogger_Prefix.pch;
+				GCC_PREFIX_HEADER = snsrlog_Prefix.pch;
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "iPhoneLogger-Info.plist";
+				INFOPLIST_FILE = "snsrlog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = iPhoneLoggerESL;
+				PRODUCT_NAME = snsrlog;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -987,13 +987,13 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iPhoneLogger_Prefix.pch;
+				GCC_PREFIX_HEADER = snsrlog_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "iPhoneLoggerAppStore-Info.plist";
+				INFOPLIST_FILE = "snsrlogAppStore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = iPhoneLogger;
+				PRODUCT_NAME = snsrlogAS;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 			};
@@ -1006,13 +1006,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = iPhoneLogger_Prefix.pch;
+				GCC_PREFIX_HEADER = snsrlog_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				GCC_VERSION = "";
-				INFOPLIST_FILE = "iPhoneLoggerAppStore-Info.plist";
+				INFOPLIST_FILE = "snsrlogAppStore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = iPhoneLogger;
+				PRODUCT_NAME = snsrlogAS;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1055,7 +1055,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iPhoneLogger" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "snsrlog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -1073,7 +1073,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneLogger" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "snsrlog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

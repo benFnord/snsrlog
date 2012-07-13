@@ -1,6 +1,6 @@
 //
 //  StreamingLiveFlipsideViewController.m
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 15.07.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  StreamingMainViewController.m
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 02.07.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
@@ -9,7 +9,7 @@
 #import "StreamingMainViewController.h"
 #import "PacketEncoderDecoder.h"
 #import "StreamingLiveViewController.h"
-#import "iPhoneLoggerAppDelegate.h"
+#import "snsrlogAppDelegate.h"
 
 @interface StreamingMainViewController ()
 
@@ -137,7 +137,7 @@
         self.serverStatus.hidden = NO;
         
         //prevent the device from sleeping and activate the proximity sensor (which also turns off the display)
-        iPhoneLoggerAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        snsrlogAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
         [appDelegate preventAutoLock:YES];
         [appDelegate enableProximitySensing:YES];
         
@@ -147,7 +147,7 @@
         self.serverStatus.hidden = YES;
         
         //allow the device to auto-lock itself again and disable proximity sensing
-        iPhoneLoggerAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        snsrlogAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
         [appDelegate preventAutoLock:NO];
         [appDelegate enableProximitySensing:NO];
     }

@@ -1,6 +1,6 @@
 //
-//  iPhoneLoggerAppDelegate.h
-//  iPhoneLogger
+//  snsrlogAppDelegate.h
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 06.03.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
@@ -13,7 +13,7 @@
 #import "StreamingMainViewController.h"
 #import "MBProgressHUD.h"
 
-@interface iPhoneLoggerAppDelegate : NSObject <UIApplicationDelegate> {
+@interface snsrlogAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     
     UITabBarController *myTabBarController;

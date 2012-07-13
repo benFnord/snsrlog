@@ -1,6 +1,6 @@
 //
 //  Labels.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 15.03.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.

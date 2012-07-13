@@ -1,6 +1,6 @@
 //
 //  StreamingMainViewController.h
-//  iPhoneLogger
+//  snsrlog
 //
 //  Created by Benjamin Thiel on 02.07.11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
