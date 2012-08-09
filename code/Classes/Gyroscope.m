@@ -40,7 +40,7 @@
  * ATTENTION: This flag not only adds/removes code within methods,
  * but shares code _across_ two methods.
  */
-#define DEVICE_MOTION_POLLING
+//#define DEVICE_MOTION_POLLING
 
 
 //anonymous category extending the class with "private" methods
@@ -88,9 +88,7 @@ static Gyroscope *sharedSingleton;
     if (self != nil) {
         
         motionManager = [[CMMotionManager alloc] init];
-#ifdef DEVICE_MOTION_POLLING
-        motionManagerTrueNorth = [[CMMotionManager alloc] init];
-#endif
+
         queue = [[NSOperationQueue alloc] init];
         accelerometerListeners = [[NSMutableSet alloc] initWithCapacity:3]; 
         
@@ -107,10 +105,6 @@ static Gyroscope *sharedSingleton;
 
             [motionManager release];
             motionManager = nil;
-#ifdef DEVICE_MOTION_POLLING
-            [motionManagerTrueNorth release];
-            motionManagerTrueNorth = nil;
-#endif
         }
         
         pollingTimer = nil;
@@ -123,9 +117,6 @@ static Gyroscope *sharedSingleton;
 -(void)dealloc {
     [self stop];
 	if (motionManager) [motionManager release];
-#ifdef DEVICE_MOTION_POLLING
-    if (motionManagerTrueNorth) [motionManagerTrueNorth release];
-#endif
     [queue release];
     [accelerometerListeners release];
 	[super dealloc];
@@ -270,12 +261,6 @@ static Gyroscope *sharedSingleton;
 }
 
 -(void)startMotionManager {
-
-    /*
-    // added by Kamil; reset reeference frame every kResetReferenceFrameTicks ticks
-    static const int kResetReferenceFrameTicks = 500;
-    static int ticks = 0;
-   */
     
     //should at least one sensor (acc or gyro) be on?
     if (isAvailable && (isAccelerometerActive || isActive)) {
@@ -292,10 +277,8 @@ static Gyroscope *sharedSingleton;
 #else
             //let the motion manage sample at 100Hz, actual polling might be lower     
             motionManager.deviceMotionUpdateInterval = 1.0 / 100;
-            motionManagerTrueNorth.deviceMotionUpdateInterval = 1.0 / 100;
             
             [motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryCorrectedZVertical];
-            [motionManagerTrueNorth startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical];
             
             [pollingTimer invalidate];
             pollingTimer = [NSTimer scheduledTimerWithTimeInterval:(1.0 / frequency)
@@ -309,26 +292,9 @@ static Gyroscope *sharedSingleton;
 
 -(void)captureDeviceMotion {
                      
-    CMDeviceMotion *motion = nil;
-    CMDeviceMotion *motionTrueNorth = nil;
+    CMDeviceMotion *motion = motionManager.deviceMotion;
     NSError *error = nil;
 #endif
-                 /* added by Kamil, due to iOS bug in handling the yaw in TrueNorth reference frame
-                    see https://devforums.apple.com/message/499560#499560
-                  */ 
-                 motion = motionManager.deviceMotion;
-#ifdef DEVICE_MOTION_POLLING
-                motionTrueNorth = motionManagerTrueNorth.deviceMotion;
-#endif
-                 
-                 /*
-                 if (++ticks > kResetReferenceFrameTicks) {
-                     // start and stop DeviceMotion
-                     ticks = 0;
-                     [self actuallyStopStart];
-                     return;
-                 }
-                  */
 
                  if (!error && motion) {
                      
@@ -339,9 +305,6 @@ static Gyroscope *sharedSingleton;
                      }
                      
                      NSTimeInterval timestamp = motion.timestamp + timestampOffsetFrom1970;
-#ifdef DEVICE_MOTION_POLLING
-                     NSTimeInterval timestampTrueNorth = motionTrueNorth.timestamp + timestampOffsetFrom1970;
-#endif
                      int label = [[Labels sharedInstance] currentLabel];
                      
 #ifndef DEVICE_MOTION_POLLING                     
@@ -389,7 +352,7 @@ static Gyroscope *sharedSingleton;
                                                               quaternion:quat
                                                                timestamp:timestamp
                                                                    label:label
-                                                             skipCount:motionManager.attitudeReferenceFrame];
+                                                               skipCount:skipCount];
                              }
                              
                          }
@@ -397,18 +360,11 @@ static Gyroscope *sharedSingleton;
                          if (isAccelerometerActive) {
                              
                              CMAcceleration accel = motion.userAcceleration;
-                             //CMAcceleration gravity = motion.gravity;
+                             CMAcceleration gravity = motion.gravity;
                              
-                             /* changed by Kamil  - log only user Acceleration */
-                             /*
                              double x = accel.x + gravity.x;
                              double y = accel.y + gravity.y;
                              double z = accel.z + gravity.z;
-                              */
-                             double x = accel.x;
-                             double y = accel.y;
-                             double z = accel.z;
-
                              
                              id<Listener> listener;
                              for (listener in accelerometerListeners) {
@@ -418,72 +374,9 @@ static Gyroscope *sharedSingleton;
                                                                            Z:z 
                                                                    timestamp:timestamp
                                                                        label:label
-                                                                 skipCount:motionManager.attitudeReferenceFrame];
+                                                                   skipCount:skipCount];
                              }
                          }
-#ifdef DEVICE_MOTION_POLLING
-                        //I'm too lazy to replace motion with motionTrueNorth
-                        motion = motionTrueNorth;
-                                  
-                         if (isActive) {
-                             
-                             CMAttitude *attitude = motion.attitude;
-                             CMRotationRate rate = motion.rotationRate;
-                             CMQuaternion quat = motion.attitude.quaternion;
-                             
-                             double x = rate.x;
-                             double y = rate.y;
-                             double z = rate.z;
-                             
-                             double roll = attitude.roll;
-                             double pitch = attitude.pitch;
-                             double yaw = attitude.yaw;
-                             
-                             id<Listener> listener;
-                             for (listener in listeners) {
-                                 
-                                 [listener didReceiveGyroscopeValueWithX:x
-                                                                       Y:y
-                                                                       Z:z
-                                                                    roll:roll
-                                                                   pitch:pitch
-                                                                     yaw:yaw 
-                                                              quaternion:quat
-                                                               timestamp:timestampTrueNorth
-                                                                   label:label
-                                                               skipCount:motionManagerTrueNorth.attitudeReferenceFrame];
-                             }
-                             
-                         }
-                         
-                         if (isAccelerometerActive) {
-                             
-                             CMAcceleration accel = motion.userAcceleration;
-                             //CMAcceleration gravity = motion.gravity;
-                             
-                             /* changed by Kamil  - log only user Acceleration */
-                             /*
-                              double x = accel.x + gravity.x;
-                              double y = accel.y + gravity.y;
-                              double z = accel.z + gravity.z;
-                              */
-                             double x = accel.x;
-                             double y = accel.y;
-                             double z = accel.z;
-                             
-                             
-                             id<Listener> listener;
-                             for (listener in accelerometerListeners) {
-                                 
-                                 [listener didReceiveAccelerometerValueWithX:x 
-                                                                           Y:y 
-                                                                           Z:z 
-                                                                   timestamp:timestampTrueNorth
-                                                                       label:label
-                                                                   skipCount:motionManagerTrueNorth.attitudeReferenceFrame];
-                             }
-                         }
-#endif
 #ifndef DEVICE_MOTION_POLLING
                          dispatch_semaphore_signal(listenersSemaphore);
                      } else {

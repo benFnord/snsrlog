@@ -39,7 +39,6 @@
 
 @interface Gyroscope : AbstractSensor {
     CMMotionManager *motionManager;
-    CMMotionManager *motionManagerTrueNorth;
     NSOperationQueue *queue;
 	NSMutableSet *accelerometerListeners;
 	BOOL isAccelerometerActive;
