@@ -249,7 +249,7 @@ enum ArchiveViewControllerSections {
 	float floatSize = theSize;
 	
     if (theSize<1023)
-		return([NSString stringWithFormat:@"%i bytes",theSize]);
+		return([NSString stringWithFormat:@"%i bytes",(int) theSize]);
 	
     floatSize = floatSize / 1024;
     if (floatSize<1023)
