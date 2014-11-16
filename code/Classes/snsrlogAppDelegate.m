@@ -266,6 +266,15 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     liveViewController.showGPS = gpsON && [[CompassAndGPS sharedInstance] isAvailable] && [userDefaults boolForKey:kShowGps];
     liveViewController.showGyroscope = gyroscopeON && [[Gyroscope sharedInstance] isAvailable] && [userDefaults boolForKey:kShowGyroscope];
     
+#ifdef DEBUG
+    //show all views
+    liveViewController.showAccelerometer = YES;
+    liveViewController.showAudio = YES;
+    liveViewController.showCompass = YES;
+    liveViewController.showGPS = YES;
+    liveViewController.showGyroscope = YES;
+#endif
+
     #ifndef APP_STORE
         liveViewController.showWifi = wifiON && [[WiFiScanner sharedInstance] isAvailable] && [userDefaults boolForKey:kShowWifi];
     #endif
