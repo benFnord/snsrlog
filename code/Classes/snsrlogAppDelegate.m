@@ -37,6 +37,7 @@
 #import "CompassAndGPS.h"
 #import "Preferences.h"
 #import "ConsoleLogger.h"
+#import "DCIntrospect.h"
 
 #ifndef APP_STORE
     #import "WiFiScanner.h"
@@ -183,6 +184,10 @@ static BOOL preferencesChangedAlreadyCalled = NO;
         [self preferencesChanged:nil];
     }
     
+    // always call after makeKeyAndDisplay.
+#if TARGET_IPHONE_SIMULATOR
+    [[DCIntrospect sharedIntrospector] start];
+#endif
     
     return YES;
 }
