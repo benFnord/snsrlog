@@ -277,8 +277,11 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     liveViewController.showCompass = compassON && [[CompassAndGPS sharedInstance] isAvailable] && [userDefaults boolForKey:kShowCompass];
     liveViewController.showGPS = gpsON && [[CompassAndGPS sharedInstance] isAvailable] && [userDefaults boolForKey:kShowGps];
     liveViewController.showGyroscope = gyroscopeON && [[Gyroscope sharedInstance] isAvailable] && [userDefaults boolForKey:kShowGyroscope];
+#ifndef APP_STORE
+    liveViewController.showWifi = wifiON && [[WiFiScanner sharedInstance] isAvailable] && [userDefaults boolForKey:kShowWifi];
+#endif
     
-#ifdef DEBUG
+#if TARGET_IPHONE_SIMULATOR
     //show all views
     liveViewController.showAccelerometer = YES;
     liveViewController.showAudio = YES;
@@ -286,10 +289,6 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     liveViewController.showGPS = YES;
     liveViewController.showGyroscope = YES;
 #endif
-
-    #ifndef APP_STORE
-        liveViewController.showWifi = wifiON && [[WiFiScanner sharedInstance] isAvailable] && [userDefaults boolForKey:kShowWifi];
-    #endif
     
     //set new frequency (implicitly also sets the Gyroscope frequency)
     [Accelerometer sharedInstance].frequency = [[NSUserDefaults standardUserDefaults] integerForKey:kAccelerometerFrequency];
