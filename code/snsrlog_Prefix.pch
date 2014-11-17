@@ -6,3 +6,6 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
+
+//exclude WiFi scanner, which only worked briefly in iOS 4.x
+#define APP_STORE
