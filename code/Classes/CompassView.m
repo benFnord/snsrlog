@@ -142,21 +142,21 @@ static const float degToRadFactor = M_PI / 180.0f;
             // negative values indicates an invalid heading
             myMagneticHeading = @"Magnetic Heading: not available";
         } else {
-            myMagneticHeading = [NSString stringWithFormat:@"Magnetic Heading: %.2f°", magneticH];
+            myMagneticHeading = [NSString stringWithFormat:@"Magnetic Heading: %.1f°", magneticH];
         }
         
         if ( signbit(trueH) ) {
             // negative values indicates an invalid heading
             myTrueHeading = @"True Heading: not available";
         } else {
-            myTrueHeading = [NSString stringWithFormat:@"True Heading: %.2f°", trueH];
+            myTrueHeading = [NSString stringWithFormat:@"True Heading: %.1f°", trueH];
         }
         
         if ( signbit(acc) ) {
             // negative values indicates an invalid estimation
             myHeadingAccuracy = @"Error: invalid heading (interferences?)";
         } else {
-            myHeadingAccuracy = [NSString stringWithFormat:@"Deviation: %.2f°", acc];
+            myHeadingAccuracy = [NSString stringWithFormat:@"Deviation: %.1f°", acc];
         }
         
         // combine all strings
