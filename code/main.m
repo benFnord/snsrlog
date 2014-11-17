@@ -31,11 +31,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "snsrlogAppDelegate.h"
 
 int main(int argc, char *argv[]) {
     
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
+    int retVal = UIApplicationMain(argc, argv, nil, @"snsrlogAppDelegate");
     [pool release];
     return retVal;
 }

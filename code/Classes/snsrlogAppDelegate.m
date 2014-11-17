@@ -169,7 +169,7 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     }
     
     //everything is set up, let's show it!
-    [self.window addSubview:myTabBarController.view];
+    [self.window setRootViewController:myTabBarController];
     [self.window makeKeyAndVisible];
     
     //create the HUD
