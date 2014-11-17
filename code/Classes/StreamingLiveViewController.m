@@ -112,7 +112,7 @@
 {
     
     //try to get the fullscreen, will be shrunk by tab bar and status bar anyway.
-    CGRect fullscreen = CGRectMake(0.0, 0.0, 480, 320);
+    CGRect fullscreen = [UIScreen mainScreen].applicationFrame;
     self.compositeView = [[[LiveView alloc] initWithFrame:fullscreen] autorelease];
     
     

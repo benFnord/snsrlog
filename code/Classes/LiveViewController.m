@@ -132,7 +132,7 @@
 - (void)loadView
 {
     //try to get the fullscreen, will be shrunk by tab bar and status bar anyway.
-    CGRect fullscreen = CGRectMake(0.0, 0.0, 480, 320);
+    CGRect fullscreen = [UIScreen mainScreen].applicationFrame;
     compositeView = [[LiveView alloc] initWithFrame:fullscreen];
     
     //create the subviews. all views have (0, 0) as origin, as the layout is handled in LiveView's layoutSubviews
