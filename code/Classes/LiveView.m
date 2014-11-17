@@ -50,14 +50,14 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+/* 
+ * Determines whether this an internal system view only by looking at its tag.
+ * Example: auto layout related views, which can be tested with [view conformsToProtocol:@protocol(UILayoutSupport)];
+ */
+BOOL isSystemView(UIView *view) {
+    
+    return view.tag == 0;
 }
-*/
 
 static const CGFloat fixedSpacerSize = 10;
 
@@ -65,10 +65,13 @@ static const CGFloat fixedSpacerSize = 10;
 - (void)layoutSubviews {
     
     CGFloat availableHeight = self.bounds.size.height;
-    int numberOfSubviews = self.subviews.count; 
+    NSUInteger numberOfSubviews = 0;
     
     for (UIView *subView in self.subviews) {
         
+        if (isSystemView(subView)) continue;
+        
+        numberOfSubviews++;
         availableHeight -= subView.frame.size.height;
     }
     
@@ -112,6 +115,8 @@ static const CGFloat fixedSpacerSize = 10;
         CGFloat currentY = 0;
         
         for (UIView *subView in sortedViews) {
+
+            if (isSystemView(subView)) continue;
             
             CGRect oldFrame = subView.frame;
             CGFloat newY = currentY + spacerHeight;

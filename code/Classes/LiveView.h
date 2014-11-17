@@ -37,7 +37,8 @@
 //order of the respective subview (top to bottom).
 typedef enum {
     
-    AccelerometerViewTag,
+    //begin with 1 as 0 also means no tag
+    AccelerometerViewTag = 1,
     GPSViewTag,
     CompassViewTag,
     AudioLevelMeterViewTag,
