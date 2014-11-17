@@ -116,7 +116,15 @@ static BOOL preferencesChangedAlreadyCalled = NO;
                                                               bundle:nil];
     recordingViewController = [[RecordingViewController alloc] init];
     archiveViewController = [[ArchiveViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    streamingViewController = [[StreamingMainViewController alloc] init];
+    StreamingMainViewController *actualStreamingVC = [[StreamingMainViewController alloc] init];
+    actualStreamingVC.title = @"Streaming";
+    streamingViewController = [[UINavigationController alloc] initWithRootViewController:[actualStreamingVC autorelease]];
+    UINavigationBar *streamingNavBar = streamingViewController.navigationBar;
+    if ([streamingNavBar respondsToSelector:@selector(setTranslucent:)]) {
+        
+        streamingNavBar.translucent = NO;
+    }
+    
     
     //listen for changes in preferences. This might also yield to a call of preferencesChanged, hence the view controllers have to be initialized
     [[NSNotificationCenter defaultCenter] addObserver:self

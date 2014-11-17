@@ -44,7 +44,7 @@
     LiveViewController *liveViewController;
     RecordingViewController *recordingViewController;
     ArchiveViewController *archiveViewController;
-    StreamingMainViewController *streamingViewController;
+    UINavigationController *streamingViewController;
     
     //used to show the status of the proximity sensor
     MBProgressHUD *proximityHUD;
