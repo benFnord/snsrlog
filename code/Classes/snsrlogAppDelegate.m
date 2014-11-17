@@ -161,6 +161,13 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     //set the tab to be shown first
     myTabBarController.selectedViewController = liveViewController;
     
+    //prevent views from protruding underneath the tab bar (default on iOS7 and newer)
+    UITabBar *tabBar = myTabBarController.tabBar;
+    if ([tabBar respondsToSelector:@selector(setTranslucent:)]) {
+        
+        tabBar.translucent = NO;
+    }
+    
     //everything is set up, let's show it!
     [self.window addSubview:myTabBarController.view];
     [self.window makeKeyAndVisible];
