@@ -376,6 +376,8 @@ enum ArchiveViewControllerSections {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] autorelease];
     }
     
+    [cell prepareForReuse];
+    
     switch (indexPath.section) {
         
         case StatisticsSection:
@@ -406,14 +408,7 @@ enum ArchiveViewControllerSections {
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    if (indexPath.section == RecordingsSection) {
-        
-        return YES;
-        
-    } else {
-        
-        return NO;
-    }
+    return (indexPath.section == RecordingsSection);
 }
 
 
