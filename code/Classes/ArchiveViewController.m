@@ -389,7 +389,7 @@ enum ArchiveViewControllerSections {
     switch (indexPath.section) {
         
         case StatisticsSection:
-            cell.textLabel.text = @"free disk space:";
+            cell.textLabel.text = @"free space:";
             cell.detailTextLabel.text = [self humanReadableStringFromFileSize:(float)[self freeDiskSpace]];
             cell.accessoryType = UITableViewCellAccessoryNone;
             break;
