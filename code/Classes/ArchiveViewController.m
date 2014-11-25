@@ -53,10 +53,12 @@ enum ArchiveViewControllerSections {
 
 -(void)loadContents;
 -(void)releaseContents;
+-(void)setEditingButtonAppearance;
 
 -(unsigned long long)summedSizeOfFilesInDirectory:(NSString *)path;
 -(NSString *)humanReadableStringFromFileSize:(float)theSize;
 -(unsigned long long)freeDiskSpace;
+
 
 @end
 
@@ -212,6 +214,13 @@ enum ArchiveViewControllerSections {
             }
         }
     }
+    
+    [self setEditingButtonAppearance];
+}
+
+-(void)setEditingButtonAppearance {
+    
+    self.navigationItem.rightBarButtonItem = ([self.recordingDisplayNames count] == 0) ? nil : self.editButtonItem;
 }
 
 //MARK: - file size methods
@@ -273,7 +282,6 @@ enum ArchiveViewControllerSections {
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"Recordings";
     
     UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh 
@@ -431,6 +439,8 @@ enum ArchiveViewControllerSections {
             
             //update the view
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            [self setEditingButtonAppearance];
         }
     }   
 }
