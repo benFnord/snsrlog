@@ -42,7 +42,6 @@ NSString* const kAudioFileAppendix = @"_Sound";
 NSString* const kAudioTimestampFileAppendix = @"_SoundTimeStamps";
 NSString* const kCompassFileAppendix = @"_Comp";
 NSString* const kGpsFileAppendix = @"_GPS";
-NSString* const kWifiFileAppendix = @"_WiFi";
 NSString* const kLabelFileAppendix = @"_Labels";
 
 //anonymous category extending the class with "private" methods
@@ -57,7 +56,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
 @property(nonatomic, retain) NSString *gyroFileName;
 @property(nonatomic, retain) NSString *labelLogFileName;
 @property(nonatomic, retain) NSString *compassFileName;
-@property(nonatomic, retain) NSString *wifiFileName;
 @property(nonatomic, retain) NSString *audioTimestampFileName;
 @property(nonatomic, retain) NSURL *audioFileURL;
 
@@ -67,7 +65,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
 - (void)initGpsFile:(NSString*)name;
 - (void)initGyroFile:(NSString*)name;
 - (void)initCompassFile:(NSString*)name;
-- (void)initWifiFile:(NSString*)name;
 - (void)initLabelLog:(NSString*)name;
 - (void)initAudioTimestampFile:(NSString*)name;
 - (void)initAudioFileWithFileName:(NSString *)name audioFormat:(AudioStreamBasicDescription)format queue:(AudioQueueRef) theQueue;
@@ -89,7 +86,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
 @synthesize gyroFileName;
 @synthesize labelLogFileName;
 @synthesize compassFileName;
-@synthesize wifiFileName;
 @synthesize audioTimestampFileName;
 @synthesize audioFileURL;
 
@@ -119,7 +115,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
     self.gyroFileName = nil;
     self.labelLogFileName = nil;
     self.compassFileName = nil;
-    self.wifiFileName = nil;
     self.audioFileURL = nil;
     self.audioTimestampFileName = nil;
     
@@ -157,9 +152,7 @@ NSString* const kLabelFileAppendix = @"_Labels";
         [self initLabelLog:self.currentFilePrefix];
         [self initGpsFile:self.currentFilePrefix];
         [self initCompassFile:self.currentFilePrefix];
-#ifndef APP_STORE
-        [self initWifiFile:self.currentFilePrefix];
-#endif
+
         if (USE_SOUNDBITS) [self initAudioTimestampFile:self.currentFilePrefix];
         
         //audio file is initialized lazily, because incoming audio data is needed to set up the file
@@ -170,7 +163,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
         usedGyro = NO;
         usedGPS = NO;
         usedCompass = NO;
-        usedWifi = NO;
         usedAudio = NO;
         
         isRecording = YES;
@@ -196,9 +188,7 @@ NSString* const kLabelFileAppendix = @"_Labels";
         fclose(gyroFile);
         fclose(gpsFile);
         fclose(compassFile);
-#ifndef APP_STORE
-        fclose(wifiFile);
-#endif
+
         fclose(audioTimestampFile);
         AudioFileClose(audioFileID);
         
@@ -212,9 +202,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
         if (!usedGyro) [fileManager removeItemAtPath:self.gyroFileName error:NULL];
         if (!usedCompass) [fileManager removeItemAtPath:self.compassFileName error:NULL];
         if (!usedGPS) [fileManager removeItemAtPath:self.gpsFileName error:NULL];
-#ifndef APP_STORE
-        if (!usedWifi) [fileManager removeItemAtPath:self.wifiFileName error:NULL];
-#endif
         if (!usedAudio) {
             if (USE_SOUNDBITS) [fileManager removeItemAtPath:self.audioTimestampFileName error:NULL];
             [fileManager removeItemAtURL:audioFileURL error:NULL];
@@ -369,28 +356,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
                             ];	
 }
 
-- (void)initWifiFile:(NSString *)name {
-            
-    currentWifiRun = 0;
-    
-    self.wifiFileName = [self initTextFile:&wifiFile
-                          withBaseFileName:name
-                                  appendix:kWifiFileAppendix
-                           dataDescription:@"WiFi data"
-                                  subtitle:nil
-                        columnDescriptions:[NSArray arrayWithObjects:
-                                            @"Number of WiFi scan",
-                                            @"Seconds.milliseconds since 1970",
-                                            @"MAC address of the WiFi network",
-                                            @"Signal strength of the WiFi network",
-                                            @"Protection status of the WiFi network (0: not protected, 1: protected)",
-                                            @"Visibility of the WiFi network (0: visible, 1: invisible)",
-                                            @"Name of the WiFi network",
-                                            @"Label used for the current sample",
-                                            nil]
-                         ];
-}
-
 - (void)initAudioTimestampFile:(NSString *)name {
     
     self.audioTimestampFileName = [self initTextFile:&audioTimestampFile
@@ -528,39 +493,6 @@ NSString* const kLabelFileAppendix = @"_Labels";
         usedCompass = YES;
         
     }
-}
-
--(void)didReceiveWifiList:(NSArray *)list scanBegan:(NSTimeInterval)beginning scanEnded:(NSTimeInterval)end label:(int)label {
-#ifndef APP_STORE    
-                        //any networks found?
-    if (isRecording && ([list count] > 0)) {
-        
-        NSTimeInterval currentTime = [[NSDate date] timeIntervalSince1970];
-        
-        fprintf(wifiFile, "%%\t %i\t %10.3f\t %10.3f\t %10.3f\n", currentWifiRun, currentTime, beginning, end);
-		
-		for (NSDictionary *item in list) {
-            
-            //WARNING: RSN_IE appears to be encryption-related, due to a lack of documentation this cannot be verified
-            BOOL encrypted = [[item objectForKey:@"WEP"] boolValue]
-                          || [item objectForKey:@"WPA_IE"]
-                          || [item objectForKey:@"RSN_IE"];
-
-			fprintf(wifiFile, "%i\t %10.3f\t %s\t %i\t %i\t %i\t %s\t %i\n", 
-                    currentWifiRun, 
-                    currentTime, 
-                    [[item objectForKey:@"BSSID"] UTF8String],
-                    [[item objectForKey:@"RSSI"] integerValue],
-                    encrypted,
-                    [[item objectForKey:@"HIDDEN_NETWORK"] boolValue],
-                    [[item objectForKey:@"SSID_STR"] UTF8String],
-                    label);
-		}
-		
-		currentWifiRun++;
-        usedWifi = YES;
-    }
-#endif
 }
 
 - (void) didReceiveNewAudioBuffer:(AudioQueueBufferRef)buffer inQueue:(AudioQueueRef)queue withAudioFormat:(AudioStreamBasicDescription)format withNumberOfPackets:(UInt32)number withPacketDescription:(const AudioStreamPacketDescription *)description atTime:(NSTimeInterval)timestamp {

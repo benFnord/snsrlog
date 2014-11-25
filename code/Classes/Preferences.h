@@ -66,7 +66,6 @@ extern NSString* const kAccelerometerOn;
 extern NSString* const kGpsOn;
 extern NSString* const kCompassOn;
 extern NSString* const kMicrophoneOn;
-extern NSString* const kWifiOn;
 extern NSString* const kGyroscopeOn;
 
 extern NSString* const kShowAccelerometer;
@@ -74,21 +73,18 @@ extern NSString* const kShowGyroscope;
 extern NSString* const kShowGps;
 extern NSString* const kShowCompass;
 extern NSString* const kShowMicrophone;
-extern NSString* const kShowWifi;
 
 extern NSString* const kRecordAccelerometer;
 extern NSString* const kRecordGyroscope;
 extern NSString* const kRecordGps;
 extern NSString* const kRecordCompass;
 extern NSString* const kRecordMicrophone;
-extern NSString* const kRecordWifi;
 
 extern NSString* const kStreamAccelerometer;
 extern NSString* const kStreamGyroscope;
 extern NSString* const kStreamGps;
 extern NSString* const kStreamCompass;
 
-extern NSString* const kWifiScanInterval;
 extern NSString* const kAccelerometerFrequency;
 
 extern NSString* const kLabels;

@@ -59,19 +59,6 @@
     NSLog(@"Compass: %10.3f  %f  %f  %f  %f  %f  %f  %i", timestamp, magneticHeading, trueHeading, headingAccuracy, x, y, z, label);
 }
 
--(void)didReceiveWifiList:(NSArray *)list scanBegan:(NSTimeInterval)beginning scanEnded:(NSTimeInterval)end label:(int)label {
-#ifndef APP_STORE    
-    NSMutableString *summary = [NSMutableString stringWithFormat:@"   WiFi: Found %i networks in %1.3f seconds: ", [list count], end - beginning];
-    
-    for (NSDictionary *item in list) {
-    
-        [summary appendFormat:@"%@, ", [item objectForKey:@"SSID_STR"]];
-    }
-    
-    NSLog(@"%@", summary);
-#endif
-}
-
 - (void)didReceiveNewAudioBuffer:(AudioQueueBufferRef)buffer inQueue:(AudioQueueRef)queue withAudioFormat:(AudioStreamBasicDescription)format withNumberOfPackets:(UInt32)number withPacketDescription:(const AudioStreamPacketDescription *)description atTime:(NSTimeInterval)timestamp {
     
     NSLog(@" Audio: %10.3f buffer size=%lu, sample rate=%5.1f", timestamp, buffer->mAudioDataByteSize, format.mSampleRate);

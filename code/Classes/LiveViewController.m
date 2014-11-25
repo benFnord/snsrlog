@@ -39,10 +39,6 @@
 #import "Preferences.h"
 #import "Gyroscope.h"
 
-#ifndef APP_STORE
-    #import "WiFiScanner.h"
-#endif
-
 #pragma mark private methods
 @interface LiveViewController ()
 
@@ -235,9 +231,6 @@
         if (showGyroscope) [[Gyroscope sharedInstance] removeListener:self];
         if (showGPS || showCompass) [[CompassAndGPS sharedInstance] removeListener:self];
         if (showAudio) [self stopAudioUpdates];
-#ifndef APP_STORE
-        if (showWifi) [[WiFiScanner sharedInstance] removeListener:self];
-#endif
     });
 }
 
@@ -253,10 +246,7 @@
     if (showAccelerometer) [[Accelerometer sharedInstance] addListener:self];
     if (showGyroscope) [[Gyroscope sharedInstance] addListener:self];
     if (showGPS || showCompass) [[CompassAndGPS sharedInstance] addListener:self];
-    if (showAudio) [self startAudioUpdates]; 
-#ifndef APP_STORE
-    if (showWifi) [[WiFiScanner sharedInstance] addListener:self];
-#endif
+    if (showAudio) [self startAudioUpdates];
 }
 
 #pragma mark -
@@ -404,23 +394,6 @@
     showAudio = shouldShowAudio;
     
 }
-#ifndef APP_STORE
--(void)setShowWifi:(BOOL)shouldShowWifi {
-    
-    if (shouldShowWifi) {
-        
-        [compositeView addSubview:wifiView];
-        if (viewIsOnScreen) [[WiFiScanner sharedInstance] addListener:self];
-        
-    } else {
-        
-        [[WiFiScanner sharedInstance] removeListener:self];
-        [wifiView removeFromSuperview];
-        
-    }
-    showWifi = shouldShowWifi;
-}
-#endif
 
 //MARK: - sample rate measurement of accelerometer and gyroscope
 -(void)startSampleRateMeasurement {
@@ -524,15 +497,6 @@
                                                     y:y
                                                     z:z];
     }
-}
-
--(void)didReceiveWifiList:(NSArray *)list scanBegan:(NSTimeInterval)beginning scanEnded:(NSTimeInterval)end label:(int)label {
-#ifndef APP_STORE    
-    if (showWifi && viewIsOnScreen) {
-        //we're coming from a different thread and UIKit requires calls to be made from the main thread
-        [wifiView performSelectorOnMainThread:@selector(updateWifiList:) withObject:list waitUntilDone:YES];
-    }
-#endif
 }
 
 - (void) didReceiveNewAudioBuffer:(AudioQueueBufferRef)buffer inQueue:(AudioQueueRef)queue  withAudioFormat:(AudioStreamBasicDescription)format withNumberOfPackets:(UInt32)number withPacketDescription:(const AudioStreamPacketDescription *)description atTime:(NSTimeInterval)timestamp {

@@ -40,10 +40,6 @@
 #import "Preferences.h"
 #import "snsrlogAppDelegate.h"
 
-#ifndef APP_STORE
-    #import "WiFiScanner.h"
-#endif
-
 #pragma mark private methods
 @interface RecordingViewController()
 
@@ -132,17 +128,6 @@
         
         [[AudioInput sharedInstance] removeListener:fileWriter];
     }
-    
-#ifndef APP_STORE
-    if ([userDefaults boolForKey:kRecordWifi]) {
-        
-        [[WiFiScanner sharedInstance] addListener:fileWriter];
-        
-    } else {
-        
-        [[WiFiScanner sharedInstance] removeListener:fileWriter];
-    }
-#endif
 }
 
 -(void)removeFileWriterFromAllSensors {
@@ -151,9 +136,6 @@
     [[Gyroscope sharedInstance] removeListener:fileWriter];
     [[CompassAndGPS sharedInstance] removeListener:fileWriter];
     [[AudioInput sharedInstance] removeListener:fileWriter];
-#ifndef APP_STORE
-    [[WiFiScanner sharedInstance] removeListener:fileWriter];
-#endif
 }
 
 //wireing up the filewriter with the sensors according to the preferences

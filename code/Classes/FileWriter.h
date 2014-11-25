@@ -57,9 +57,7 @@ extern NSString* const kLabelFileAppendix;
 	BOOL usedGyro;
 	BOOL usedSound;
 	BOOL usedCompass;
-	BOOL usedWifi;
     BOOL usedAudio;
-    int currentWifiRun;
     
     NSFileManager *fileManager;
 	
@@ -69,7 +67,6 @@ extern NSString* const kLabelFileAppendix;
 	FILE *gyroFile;
 	FILE *labelLogFile;
 	FILE *compassFile;
-	FILE *wifiFile;
     FILE *audioTimestampFile;
     
     //audio file
@@ -85,7 +82,6 @@ extern NSString* const kLabelFileAppendix;
 	NSString *gyroFileName;
 	NSString *labelLogFileName;
 	NSString *compassFileName;
-	NSString *wifiFileName;
     NSString *audioTimestampFileName;
     NSURL *audioFileURL;
     

@@ -16,7 +16,7 @@
 		3CFB9E304859EB1D84A5C3F0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB8983C1EF581F97C2DBD6A /* libPods.a */; };
 		B50248BD1323D321000EE4B8 /* ConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = B50248BC1323D321000EE4B8 /* ConsoleLogger.m */; };
 		B50248C61323E310000EE4B8 /* AbstractSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = B50248C51323E310000EE4B8 /* AbstractSensor.m */; };
-		B50CF6F01338D8FF003F6725 /* WiFiScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B50CF6EF1338D8FF003F6725 /* WiFiScanner.m */; };
+		B5118AB71A24D7F8008DF079 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5118AB61A24D7F8008DF079 /* Settings.bundle */; };
 		B51ED857138156F800BB0684 /* GPSView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51ED856138156F800BB0684 /* GPSView.m */; };
 		B53551FB135B257800D2CACF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53551FA135B257800D2CACF /* AVFoundation.framework */; };
 		B542DC5E13B3728B0057FF5E /* ArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B542DC5C13B3728B0057FF5E /* ArchiveViewController.m */; };
@@ -96,7 +96,6 @@
 		B5B8E09C13BF2D2E006C44AB /* StreamingMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B8E09A13BF2D2E006C44AB /* StreamingMainViewController.xib */; };
 		B5CB7D7F132E6055005BFDC3 /* FileWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB7D7E132E6055005BFDC3 /* FileWriter.m */; };
 		B5CB7D82132FB987005BFDC3 /* Labels.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CB7D81132FB986005BFDC3 /* Labels.m */; };
-		B5CDCFD413AA47FE00B0FE35 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5CDCFD313AA47FE00B0FE35 /* Settings.bundle */; };
 		B5D1712F1329044500A8EF72 /* Preferences.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D1712E1329044500A8EF72 /* Preferences.m */; };
 		B5D63689147FC8460009FF3D /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D63688147FC8460009FF3D /* MBProgressHUD.m */; };
 		B5D6E8DA138BE614002AABC6 /* RecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D6E8D8138BE614002AABC6 /* RecordingViewController.m */; };
@@ -129,8 +128,7 @@
 		B50248C41323E310000EE4B8 /* AbstractSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AbstractSensor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B50248C51323E310000EE4B8 /* AbstractSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AbstractSensor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B5057BE815B0AF2A00EF6395 /* snsrlogAppStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "snsrlogAppStore-Info.plist"; sourceTree = "<group>"; };
-		B50CF6EE1338D8FF003F6725 /* WiFiScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiFiScanner.h; sourceTree = "<group>"; };
-		B50CF6EF1338D8FF003F6725 /* WiFiScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiFiScanner.m; sourceTree = "<group>"; };
+		B5118AB61A24D7F8008DF079 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B51ED855138156F800BB0684 /* GPSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSView.h; sourceTree = "<group>"; };
 		B51ED856138156F800BB0684 /* GPSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSView.m; sourceTree = "<group>"; };
 		B53551FA135B257800D2CACF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -228,12 +226,10 @@
 		B5B8E09813BF2D2E006C44AB /* StreamingMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingMainViewController.h; sourceTree = "<group>"; };
 		B5B8E09913BF2D2E006C44AB /* StreamingMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingMainViewController.m; sourceTree = "<group>"; };
 		B5B8E09A13BF2D2E006C44AB /* StreamingMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StreamingMainViewController.xib; sourceTree = "<group>"; };
-		B5C3C0C21493A269004BBC15 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B5CB7D7D132E6054005BFDC3 /* FileWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileWriter.h; sourceTree = "<group>"; };
 		B5CB7D7E132E6055005BFDC3 /* FileWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileWriter.m; sourceTree = "<group>"; };
 		B5CB7D80132FB986005BFDC3 /* Labels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Labels.h; sourceTree = "<group>"; };
 		B5CB7D81132FB986005BFDC3 /* Labels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Labels.m; sourceTree = "<group>"; };
-		B5CDCFD313AA47FE00B0FE35 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B5D1712D1329044500A8EF72 /* Preferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preferences.h; sourceTree = "<group>"; };
 		B5D1712E1329044500A8EF72 /* Preferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preferences.m; sourceTree = "<group>"; };
 		B5D63687147FC8460009FF3D /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -308,8 +304,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				B5C3C0C01493A269004BBC15 /* AppStoreSettingsBundle */,
-				B5CDCFD313AA47FE00B0FE35 /* Settings.bundle */,
 				65BDE0D0EF0A755BF64D063E /* Pods */,
 			);
 			name = CustomTemplate;
@@ -327,6 +321,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B5118AB61A24D7F8008DF079 /* Settings.bundle */,
 				B5B6DF0B1A18C1FC004EE220 /* Default-568h@2x.png */,
 				B56C3F3015B026AE00E7EB3F /* Default.png */,
 				B56C3F3115B026AE00E7EB3F /* Default@2x.png */,
@@ -387,8 +382,6 @@
 				B5CB7D81132FB986005BFDC3 /* Labels.m */,
 				B5E3890C133263CC00F33643 /* CompassAndGPS.h */,
 				B5E3890D133263CE00F33643 /* CompassAndGPS.m */,
-				B50CF6EE1338D8FF003F6725 /* WiFiScanner.h */,
-				B50CF6EF1338D8FF003F6725 /* WiFiScanner.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -560,14 +553,6 @@
 			name = Streaming;
 			sourceTree = "<group>";
 		};
-		B5C3C0C01493A269004BBC15 /* AppStoreSettingsBundle */ = {
-			isa = PBXGroup;
-			children = (
-				B5C3C0C21493A269004BBC15 /* Settings.bundle */,
-			);
-			path = AppStoreSettingsBundle;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -630,7 +615,6 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				B5D6E8DB138BE614002AABC6 /* RecordingViewController.xib in Resources */,
 				B5B5F5BC13938CCE0053FD23 /* LockScreenViewController.xib in Resources */,
-				B5CDCFD413AA47FE00B0FE35 /* Settings.bundle in Resources */,
 				B5B45DB813BA078B0062CE4C /* RecordingsFileViewController.xib in Resources */,
 				B5B8E09C13BF2D2E006C44AB /* StreamingMainViewController.xib in Resources */,
 				B5B3846315AEFF79004D8DC6 /* AddLabelPopupViewController.xib in Resources */,
@@ -680,6 +664,7 @@
 				B56C3F7315B0270A00E7EB3F /* satellite@2x.png in Resources */,
 				B56C3F7515B0270A00E7EB3F /* streamingIcon.png in Resources */,
 				B56C3F7715B0270A00E7EB3F /* streamingIcon@2x.png in Resources */,
+				B5118AB71A24D7F8008DF079 /* Settings.bundle in Resources */,
 				B56C3F7915B0270A00E7EB3F /* wifi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,7 +719,6 @@
 				B5CB7D7F132E6055005BFDC3 /* FileWriter.m in Sources */,
 				B5CB7D82132FB987005BFDC3 /* Labels.m in Sources */,
 				B5E3890E133263D000F33643 /* CompassAndGPS.m in Sources */,
-				B50CF6F01338D8FF003F6725 /* WiFiScanner.m in Sources */,
 				B5EE528F1351A0F700EB6809 /* AudioInput.m in Sources */,
 				B54E8ADD1365B28D0010467E /* PacketEncoderDecoder.m in Sources */,
 				B54E8ADE1365B28D0010467E /* StreamingClient.m in Sources */,

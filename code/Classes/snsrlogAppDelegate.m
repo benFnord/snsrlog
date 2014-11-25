@@ -39,10 +39,6 @@
 #import "ConsoleLogger.h"
 #import "DCIntrospect.h"
 
-#ifndef APP_STORE
-    #import "WiFiScanner.h"
-#endif
-
 @implementation snsrlogAppDelegate
 
 @synthesize window;
@@ -102,13 +98,7 @@ static BOOL preferencesChangedAlreadyCalled = NO;
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-#ifndef APP_STORE
-    NSLog(@"Non-AppStore version!");
-#endif
-    
-    // Override point for customization after application launch.
-    
+
     myTabBarController = [[UITabBarController alloc] init];
     
     //create the view controllers
@@ -260,7 +250,7 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     
     NSLog(@"applicationWillTerminate:");
     //close the files correctly, as cached data may be lost otherwise
-    [recordingViewController stopRecording];
+    [(RecordingViewController *)recordingViewController.visibleViewController stopRecording];
 }
 
 
@@ -289,9 +279,6 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     BOOL microphoneON = [userDefaults boolForKey:kMicrophoneOn];
     BOOL gpsON = [userDefaults boolForKey:kGpsOn];
     BOOL compassON = [userDefaults boolForKey:kCompassOn];
-#ifndef APP_STORE
-    BOOL wifiON = [userDefaults boolForKey:kWifiOn];
-#endif
     
     //show/hide the live views
     liveViewController.showAccelerometer = accelerometerON && [[Accelerometer sharedInstance] isAvailable] && [userDefaults boolForKey:kShowAccelerometer];
@@ -299,9 +286,6 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     liveViewController.showCompass = compassON && [[CompassAndGPS sharedInstance] isAvailable] && [userDefaults boolForKey:kShowCompass];
     liveViewController.showGPS = gpsON && [[CompassAndGPS sharedInstance] isAvailable] && [userDefaults boolForKey:kShowGps];
     liveViewController.showGyroscope = gyroscopeON && [[Gyroscope sharedInstance] isAvailable] && [userDefaults boolForKey:kShowGyroscope];
-#ifndef APP_STORE
-    liveViewController.showWifi = wifiON && [[WiFiScanner sharedInstance] isAvailable] && [userDefaults boolForKey:kShowWifi];
-#endif
     
 #if TARGET_IPHONE_SIMULATOR
     //show all views
@@ -345,17 +329,6 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     } else  {
         [[CompassAndGPS sharedInstance] stopCompass];
     }
-
-    #ifndef APP_STORE
-    if (wifiON) {
-        
-        //stop it to trigger a restart in case the scan interval changed
-        [[WiFiScanner sharedInstance] stop];
-        [[WiFiScanner sharedInstance] start];
-    } else  {
-        [[WiFiScanner sharedInstance] stop];
-    }
-    #endif
 }
 
 -(void)audioInputAvailabilityChanged:(NSNotification *)notification {

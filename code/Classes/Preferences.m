@@ -36,7 +36,6 @@ NSString* const kAccelerometerOn = @"accelerometerOn";
 NSString* const kGpsOn = @"gpsOn";
 NSString* const kCompassOn = @"compassOn";
 NSString* const kMicrophoneOn = @"microphoneOn";
-NSString* const kWifiOn = @"wifiOn";
 NSString* const kGyroscopeOn = @"gyroscopeOn";
 
 NSString* const kShowAccelerometer = @"showAccelerometer";
@@ -44,21 +43,18 @@ NSString* const kShowGyroscope = @"showGyroscope";
 NSString* const kShowGps = @"showGps";
 NSString* const kShowCompass = @"showCompass";
 NSString* const kShowMicrophone = @"showMicrophone";
-NSString* const kShowWifi = @"showWifi";
 
 NSString* const kRecordAccelerometer = @"recordAccelerometer";
 NSString* const kRecordGyroscope = @"recordGyroscope";
 NSString* const kRecordGps = @"recordGps";
 NSString* const kRecordCompass = @"recordCompass";
 NSString* const kRecordMicrophone = @"recordMicrophone";
-NSString* const kRecordWifi = @"recordWifi";
 
 NSString* const kStreamAccelerometer = @"streamAccelerometer";
 NSString* const kStreamGyroscope = @"streamGyroscope";
 NSString* const kStreamGps = @"streamGps";
 NSString* const kStreamCompass = @"streamCompass";
 
-NSString* const kWifiScanInterval = @"wifiScanInterval";
 NSString* const kAccelerometerFrequency = @"accelerometerFrequency";
 
 NSString* const kLabels = @"labels";
