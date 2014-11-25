@@ -47,16 +47,17 @@
 }
 
 @property (nonatomic, retain) IBOutlet UITableView *myTableView;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *removeLabelButton;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *addLabelButton;
 @property (nonatomic, retain) IBOutlet BTFancyButton *recordingButton;
 @property (nonatomic, retain) IBOutlet BTFancyButton *lockButton;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinningWheel;
 
+@property (nonatomic, retain) UIBarButtonItem *removeLabelButton;
+@property (nonatomic, retain) UIBarButtonItem *addLabelButton;
+
 -(IBAction)recordingPressed:(BTFancyButton *)sender;
 -(IBAction)lockScreen:(UIButton *)sender;
--(IBAction)removeLabels:(UIBarButtonItem *)sender;
--(IBAction)addLabel:(UIBarButtonItem *)sender;
+-(void)removeLabels:(UIBarButtonItem *)sender;
+-(void)addLabel:(UIBarButtonItem *)sender;
 
 //used to listen for label changes
 -(void)didReceiveChangeToLabel:(int)label timestamp:(NSTimeInterval)timestamp;

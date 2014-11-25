@@ -261,6 +261,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.addLabelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                        target:self
+                                                                        action:@selector(addLabel:)];
+    self.navigationItem.leftBarButtonItem = [self.addLabelButton autorelease];
+    
+    self.removeLabelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash
+                                                                           target:self
+                                                                           action:@selector(removeLabels:)];
+    self.navigationItem.rightBarButtonItem = [self.removeLabelButton autorelease];
+    
     //The recording button should reflect the current recording status.
     //This is necessary, since reloading the view after a memory warning
     //may let the view get out of sync with the model

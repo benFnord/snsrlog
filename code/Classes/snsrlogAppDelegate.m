@@ -114,15 +114,29 @@ static BOOL preferencesChangedAlreadyCalled = NO;
     //create the view controllers
     liveViewController = [[LiveViewController alloc] initWithNibName:nil
                                                               bundle:nil];
-    recordingViewController = [[RecordingViewController alloc] init];
+    
+    //recording
+    RecordingViewController *actualRecordingViewController = [[RecordingViewController alloc] init];
+    actualRecordingViewController.title = @"Recording";
+    recordingViewController = [[UINavigationController alloc] initWithRootViewController:[actualRecordingViewController autorelease]];
+    
+    //archive
     archiveViewController = [[ArchiveViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    
+    //streaming
     StreamingMainViewController *actualStreamingVC = [[StreamingMainViewController alloc] init];
     actualStreamingVC.title = @"Streaming";
     streamingViewController = [[UINavigationController alloc] initWithRootViewController:[actualStreamingVC autorelease]];
-    UINavigationBar *streamingNavBar = streamingViewController.navigationBar;
-    if ([streamingNavBar respondsToSelector:@selector(setTranslucent:)]) {
+
+    //make navigation bars opaque on iOS>=7
+    NSArray *navBars = @[recordingViewController.navigationBar,
+                         streamingViewController.navigationBar];
+    for (UINavigationBar *navBar in navBars) {
         
-        streamingNavBar.translucent = NO;
+        if ([navBar respondsToSelector:@selector(setTranslucent:)]) {
+            
+            navBar.translucent = NO;
+        }
     }
     
     

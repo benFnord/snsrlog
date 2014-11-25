@@ -42,7 +42,7 @@
     
     UITabBarController *myTabBarController;
     LiveViewController *liveViewController;
-    RecordingViewController *recordingViewController;
+    UINavigationController *recordingViewController;
     ArchiveViewController *archiveViewController;
     UINavigationController *streamingViewController;
     
