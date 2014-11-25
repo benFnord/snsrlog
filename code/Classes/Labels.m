@@ -86,7 +86,7 @@ static Labels *sharedSingleton;
         } else {
             
             labels = [[NSMutableArray alloc] initWithCapacity:1];
-            [labels addObject:@"Default Gesture"];
+            [labels addObject:@"Default Label"];
         }
         
         currentLabel = 0; 
