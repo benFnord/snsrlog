@@ -62,7 +62,7 @@
 @implementation RecordingViewController
 
 //IBOutlets
-@synthesize myTableView, addLabelButton, removeLabelButton, recordingButton, lockButton, spinningWheel;
+@synthesize myTableView, addLabelButton, removeLabelButton, recordingButton, lockButton;
 
 #pragma mark - initialization methods
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -172,7 +172,6 @@
     self.removeLabelButton = nil;
     self.recordingButton = nil;
     self.lockButton = nil;
-    self.spinningWheel = nil;
 }
 
 - (void)dealloc
@@ -214,7 +213,6 @@
         [appDelegate preventAutoLock:YES];
         [appDelegate enableProximitySensing:YES];
         
-        [self.spinningWheel startAnimating];
         [self adaptRecordingButtonAppearance];
     }
 }
@@ -235,7 +233,6 @@
         [appDelegate preventAutoLock:NO];
         [appDelegate enableProximitySensing:NO];
         
-        [self.spinningWheel stopAnimating];
         [self adaptRecordingButtonAppearance];
     }
 }

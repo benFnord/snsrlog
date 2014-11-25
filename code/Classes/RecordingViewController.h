@@ -49,7 +49,6 @@
 @property (nonatomic, retain) IBOutlet UITableView *myTableView;
 @property (nonatomic, retain) IBOutlet BTFancyButton *recordingButton;
 @property (nonatomic, retain) IBOutlet BTFancyButton *lockButton;
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *spinningWheel;
 
 @property (nonatomic, retain) UIBarButtonItem *removeLabelButton;
 @property (nonatomic, retain) UIBarButtonItem *addLabelButton;
