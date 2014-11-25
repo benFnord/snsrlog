@@ -347,7 +347,6 @@ enum ArchiveViewControllerSections {
             return 1;
         
         case RecordingsSection:
-            if (needsReload) [self loadContents];
             return [self.recordingDisplayNames count];
         
         case CurrentRecordingSection:
