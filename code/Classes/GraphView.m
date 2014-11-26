@@ -385,8 +385,6 @@ void DrawGridlines(CGContextRef context, CGFloat x, CGFloat width)
 // A common init routine for use with -initWithFrame: and -initWithCoder:
 -(void)commonInitWithMaxValue:(NSInteger)maximumValue Labels:(NSArray *)labels xDescription:(NSString *)xDescription yDescription:(NSString *)yDescription zDescription:(NSString *)zDescription;
 
--(double)normalize:(double)value;
-
 -(void)addToViewX:(double)x y:(double)y z:(double)z;
 -(void)drawBuffer:(CADisplayLink *)sender;
 
@@ -633,7 +631,7 @@ void DrawGridlines(CGContextRef context, CGFloat x, CGFloat width)
     }];
 }
 
--(double)normalize:(double)value {
+double normalize(double value, NSInteger maxValue) {
     
     return (value / maxValue) * 3; //*3, because [-3...3] is the value range this class was initally designed for
 }
@@ -675,9 +673,9 @@ void DrawGridlines(CGContextRef context, CGFloat x, CGFloat width)
         
         int bufferIndex = produceCount % kGraphViewBufferSize;
         
-        xBuffer[bufferIndex] = [self normalize:x];
-        yBuffer[bufferIndex] = [self normalize:y];
-        zBuffer[bufferIndex] = [self normalize:z];
+        xBuffer[bufferIndex] = normalize(x, maxValue);
+        yBuffer[bufferIndex] = normalize(y, maxValue);
+        zBuffer[bufferIndex] = normalize(z, maxValue);
         
         produceCount += 1;
     }
