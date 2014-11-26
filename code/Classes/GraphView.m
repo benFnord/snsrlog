@@ -755,7 +755,10 @@ double normalize(double value, NSInteger maxValue) {
 	// We add it at the front of the array because -recycleSegment expects the oldest segment
 	// to be at the end of the array. As long as we always insert the youngest segment at the front
 	// this will be true.
-	[segments insertObject:segment atIndex:0];    
+	[segments insertObject:segment atIndex:0];
+    
+    //set the correct scale factor on the backing CALayer (1.0 for old devices, 2.0 for retina, 3.0 for iPhone6+?)
+    segment.layer.contentsScale = self.contentScaleFactor;
     
     //Counterintuitively , un-commenting the following line leads to a crash in GraphView's [super dealloc].
     //TODO: Understand why this is legitimate, or file a bug at Apple because either this class has a bug or
