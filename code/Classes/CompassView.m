@@ -208,6 +208,9 @@ static const double kAnimationDuration = 0.5;
                                 self.frame.size.width,
                                 [[self class] preferredSize].height); //shrink in height
         
+        //experiments revealed: not needed on iOS<=5, but needed on iOS8
+        [self.superview setNeedsLayout];
+        
         CGAffineTransform moveViewToTheRight = CGAffineTransformIdentity;
         
         [UIView animateWithDuration:kAnimationDuration animations:^(void) {
@@ -230,6 +233,9 @@ static const double kAnimationDuration = 0.5;
                                 self.frame.origin.y,
                                 self.frame.size.width,
                                 [GraphView preferredSize].height); //expand in height
+        
+        //experiments revealed: not needed on iOS<=5, but needed on iOS8
+        [self.superview setNeedsLayout];
         
         CGAffineTransform moveViewToTheLeft = CGAffineTransformMakeTranslation(- compassGraphViewX, 0);
         [UIView animateWithDuration:kAnimationDuration animations:^(void) {
