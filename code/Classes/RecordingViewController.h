@@ -33,11 +33,10 @@
 #import <UIKit/UIKit.h>
 #import "BTFancyButton.h"
 #import "Labels.h"
-#import "AddLabelPopupViewController.h"
 #import "LockScreenViewController.h"
 #import "FileWriter.h"
 
-@interface RecordingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, AddLabelDelegate, LockScreenDelegate>
+@interface RecordingViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate, LockScreenDelegate>
 {
     //weak reference
     Labels *labels;

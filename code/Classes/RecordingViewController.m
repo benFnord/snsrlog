@@ -320,12 +320,16 @@
 
 -(IBAction)addLabel:(UIBarButtonItem *)sender {
     
-    //show a view for label entry
-    AddLabelPopupViewController *addLabelViewController = [[AddLabelPopupViewController alloc] init];
-    addLabelViewController.delegate = self;
-
-    [self presentModalViewController:addLabelViewController animated:YES];
-    [addLabelViewController release];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Please Enter a New Label"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"Add Label", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField *textField = [alert textFieldAtIndex:0];
+    textField.placeholder = @"Label Name";
+    [alert show];
+    [alert release];
 }
 
 #pragma mark LockScreenDelegate protocols
@@ -336,15 +340,18 @@
 
 
 #pragma mark AddLabelDelegate protocol
--(void)userEnteredLabelOrNil:(NSString *)newLabel {
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
-    if (newLabel != nil) {
+    if (buttonIndex == 1) {
         
-        [labels addLabel:newLabel];
-        [myTableView reloadData];
-    }
+        NSString *text = [alertView textFieldAtIndex:0].text;
+        if (text != nil) {
+            
+            [labels addLabel:text];
+            [myTableView reloadData];
+        }
     
-    [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark - Table view data source
