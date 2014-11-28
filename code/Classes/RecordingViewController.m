@@ -476,14 +476,15 @@
     lastLabel = label;
     
     //add checkmark to the new entry
-    NSIndexPath *newCellPosition = [NSIndexPath indexPathForRow:label inSection:0];
+    NSIndexPath *newCellPosition = [NSIndexPath indexPathForRow:label
+                                                      inSection:0];
     UITableViewCell *newCell = [myTableView cellForRowAtIndexPath:newCellPosition];
     [newCell setAccessoryType:UITableViewCellAccessoryCheckmark];
     
     //scroll into visibility
     [myTableView scrollToRowAtIndexPath:newCellPosition
-                               atScrollPosition:UITableViewScrollPositionNone
-                                       animated:YES];
+                       atScrollPosition:UITableViewScrollPositionNone
+                               animated:YES];
 
 }
 
