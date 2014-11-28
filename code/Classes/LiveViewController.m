@@ -421,14 +421,14 @@
         
         if (showGyroscope) {
             
-            accAndGyroView.gyroscopeStatusString = [NSString stringWithFormat:@"actual sampling rate: %d Hz, skipped values: %d",
-                                                    gyroscopeSampleRateCounter, skipCount];
+            accAndGyroView.gyroscopeStatusString = [NSString stringWithFormat:@"actual sampling rate: %d Hz",
+                                                    gyroscopeSampleRateCounter];
         }
         
         if (showAccelerometer) {
             
-            accAndGyroView.accelerometerStatusString = [NSString stringWithFormat:@"actual sampling rate: %d Hz, skipped values: %d",
-                                                        accelerometerSampleRateCounter, skipCount];
+            accAndGyroView.accelerometerStatusString = [NSString stringWithFormat:@"actual sampling rate: %d Hz",
+                                                        accelerometerSampleRateCounter];
         }
     }
     

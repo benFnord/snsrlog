@@ -659,7 +659,7 @@ double normalize(double value, NSInteger maxValue) {
 -(void)addX:(double)x y:(double)y z:(double)z skipCount:(NSUInteger)skipCount
 {
     [self addX:x y:y z:z];
-    self.statusString = [NSString stringWithFormat:@"skipped values: %d", skipCount];
+    //self.statusString = [NSString stringWithFormat:@"skipped values: %d", skipCount];
 }
 
 //fills the buffer
