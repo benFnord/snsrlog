@@ -62,7 +62,7 @@
             forControlEvents:UIControlEventValueChanged];
         
         switches = [[NSArray arrayWithObjects:accSwitch, compassSwitch, gpsSwitch, nil] retain];
-        displayNames = [[NSArray arrayWithObjects:@"show accelerometer", @"show compass", @"show GPS", nil] retain];
+        displayNames = [[NSArray arrayWithObjects:@"stream accelerometer", @"stream compass", @"stream GPS", nil] retain];
         
         //switches are now retained by the NSArray
         [accSwitch release];
