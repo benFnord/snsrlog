@@ -19,6 +19,7 @@
 		B5118AB71A24D7F8008DF079 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5118AB61A24D7F8008DF079 /* Settings.bundle */; };
 		B51ED857138156F800BB0684 /* GPSView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51ED856138156F800BB0684 /* GPSView.m */; };
 		B53551FB135B257800D2CACF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53551FA135B257800D2CACF /* AVFoundation.framework */; };
+		B536D61D1A2B92D500ED37D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B536D61C1A2B92D500ED37D2 /* Images.xcassets */; };
 		B542DC5E13B3728B0057FF5E /* ArchiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B542DC5C13B3728B0057FF5E /* ArchiveViewController.m */; };
 		B54E8ADD1365B28D0010467E /* PacketEncoderDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B54E8AD81365B28D0010467E /* PacketEncoderDecoder.m */; };
 		B54E8ADE1365B28D0010467E /* StreamingClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B54E8ADA1365B28D0010467E /* StreamingClient.m */; };
@@ -129,6 +130,7 @@
 		B51ED855138156F800BB0684 /* GPSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSView.h; sourceTree = "<group>"; };
 		B51ED856138156F800BB0684 /* GPSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSView.m; sourceTree = "<group>"; };
 		B53551FA135B257800D2CACF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B536D61C1A2B92D500ED37D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = snsrlog/Images.xcassets; sourceTree = "<group>"; };
 		B542DC5B13B3728B0057FF5E /* ArchiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiveViewController.h; sourceTree = "<group>"; };
 		B542DC5C13B3728B0057FF5E /* ArchiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiveViewController.m; sourceTree = "<group>"; };
 		B54E8AD71365B28D0010467E /* PacketEncoderDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PacketEncoderDecoder.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -316,6 +318,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B536D61C1A2B92D500ED37D2 /* Images.xcassets */,
 				B5118AB61A24D7F8008DF079 /* Settings.bundle */,
 				B5B6DF0B1A18C1FC004EE220 /* Default-568h@2x.png */,
 				B56C3F3215B026AE00E7EB3F /* Icon-Small.png */,
@@ -631,6 +634,7 @@
 				B56C3F2815B0267D00E7EB3F /* SoundLevel_17.png in Resources */,
 				B56C3F2A15B0267D00E7EB3F /* SoundLevel_18.png in Resources */,
 				B56C3F2C15B0267D00E7EB3F /* SoundLevel_19.png in Resources */,
+				B536D61D1A2B92D500ED37D2 /* Images.xcassets in Resources */,
 				B56C3F2E15B0267D00E7EB3F /* SoundLevel_20.png in Resources */,
 				B56C3F3B15B026AE00E7EB3F /* Icon-Small.png in Resources */,
 				B56C3F3D15B026AE00E7EB3F /* Icon-Small@2x.png in Resources */,
@@ -743,6 +747,8 @@
 			baseConfigurationReference = 7C073279ABF017091D4F4658 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -764,6 +770,8 @@
 			baseConfigurationReference = 85C058CA555B000EA552F9B0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
