@@ -53,8 +53,6 @@
 		B56C3F2A15B0267D00E7EB3F /* SoundLevel_18.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F0315B0267D00E7EB3F /* SoundLevel_18.png */; };
 		B56C3F2C15B0267D00E7EB3F /* SoundLevel_19.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F0415B0267D00E7EB3F /* SoundLevel_19.png */; };
 		B56C3F2E15B0267D00E7EB3F /* SoundLevel_20.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F0515B0267D00E7EB3F /* SoundLevel_20.png */; };
-		B56C3F3715B026AE00E7EB3F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3015B026AE00E7EB3F /* Default.png */; };
-		B56C3F3915B026AE00E7EB3F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3115B026AE00E7EB3F /* Default@2x.png */; };
 		B56C3F3B15B026AE00E7EB3F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3215B026AE00E7EB3F /* Icon-Small.png */; };
 		B56C3F3D15B026AE00E7EB3F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3315B026AE00E7EB3F /* Icon-Small@2x.png */; };
 		B56C3F3F15B026AE00E7EB3F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3415B026AE00E7EB3F /* Icon.png */; };
@@ -175,8 +173,6 @@
 		B56C3F0315B0267D00E7EB3F /* SoundLevel_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SoundLevel_18.png; path = Assets/AudioLevelMeter/SoundLevel_18.png; sourceTree = "<group>"; };
 		B56C3F0415B0267D00E7EB3F /* SoundLevel_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SoundLevel_19.png; path = Assets/AudioLevelMeter/SoundLevel_19.png; sourceTree = "<group>"; };
 		B56C3F0515B0267D00E7EB3F /* SoundLevel_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SoundLevel_20.png; path = Assets/AudioLevelMeter/SoundLevel_20.png; sourceTree = "<group>"; };
-		B56C3F3015B026AE00E7EB3F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Assets/Default.png; sourceTree = "<group>"; };
-		B56C3F3115B026AE00E7EB3F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Assets/Default@2x.png"; sourceTree = "<group>"; };
 		B56C3F3215B026AE00E7EB3F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Assets/Icon-Small.png"; sourceTree = "<group>"; };
 		B56C3F3315B026AE00E7EB3F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Assets/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		B56C3F3415B026AE00E7EB3F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Assets/Icon.png; sourceTree = "<group>"; };
@@ -322,8 +318,6 @@
 			children = (
 				B5118AB61A24D7F8008DF079 /* Settings.bundle */,
 				B5B6DF0B1A18C1FC004EE220 /* Default-568h@2x.png */,
-				B56C3F3015B026AE00E7EB3F /* Default.png */,
-				B56C3F3115B026AE00E7EB3F /* Default@2x.png */,
 				B56C3F3215B026AE00E7EB3F /* Icon-Small.png */,
 				B56C3F3315B026AE00E7EB3F /* Icon-Small@2x.png */,
 				B56C3F3415B026AE00E7EB3F /* Icon.png */,
@@ -638,8 +632,6 @@
 				B56C3F2A15B0267D00E7EB3F /* SoundLevel_18.png in Resources */,
 				B56C3F2C15B0267D00E7EB3F /* SoundLevel_19.png in Resources */,
 				B56C3F2E15B0267D00E7EB3F /* SoundLevel_20.png in Resources */,
-				B56C3F3715B026AE00E7EB3F /* Default.png in Resources */,
-				B56C3F3915B026AE00E7EB3F /* Default@2x.png in Resources */,
 				B56C3F3B15B026AE00E7EB3F /* Icon-Small.png in Resources */,
 				B56C3F3D15B026AE00E7EB3F /* Icon-Small@2x.png in Resources */,
 				B56C3F3F15B026AE00E7EB3F /* Icon.png in Resources */,
