@@ -32,6 +32,19 @@
 
 #import "LiveView.h"
 
+//taken from: http://stackoverflow.com/a/18776211
+NSUInteger DeviceSystemMajorVersion() {
+    static NSUInteger _deviceSystemMajorVersion = -1;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        NSString *systemVersion = [UIDevice currentDevice].systemVersion;
+        _deviceSystemMajorVersion = [[systemVersion componentsSeparatedByString:@"."][0] intValue];
+    });
+    
+    return _deviceSystemMajorVersion;
+}
+
 
 @implementation LiveView
 
@@ -64,7 +77,9 @@ static const CGFloat fixedSpacerSize = 10;
 //positions the views, so that they have the same vertical space between them (and the top/bottom)
 - (void)layoutSubviews {
     
-    CGFloat availableHeight = self.bounds.size.height;
+    //On iOS>=7, views are positioned beneath the status bar, which we don't want and try to avoid by pushing everything down by 20pts
+    CGFloat statusBarOffset = (DeviceSystemMajorVersion() < 7) ? 0 : 20;
+    CGFloat availableHeight = self.bounds.size.height - statusBarOffset;
     NSUInteger numberOfSubviews = 0;
     
     for (UIView *subView in self.subviews) {
@@ -86,7 +101,7 @@ static const CGFloat fixedSpacerSize = 10;
         CGFloat newHeight = oldFrame.size.height + enlargeTableViewHeightBy;
         
         CGRect newFrame = CGRectMake(oldFrame.origin.x,
-                                     oldFrame.origin.y,
+                                     oldFrame.origin.y + statusBarOffset,
                                      oldFrame.size.width,
                                      newHeight);
 
@@ -112,7 +127,7 @@ static const CGFloat fixedSpacerSize = 10;
     //position the views and animate the changes
     [UIView animateWithDuration:kLiveViewLayoutingAnimationDuration animations:^(void) {
         
-        CGFloat currentY = 0;
+        CGFloat currentY = 0 + statusBarOffset;
         
         for (UIView *subView in sortedViews) {
 
