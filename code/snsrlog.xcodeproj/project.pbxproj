@@ -54,10 +54,6 @@
 		B56C3F2A15B0267D00E7EB3F /* SoundLevel_18.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F0315B0267D00E7EB3F /* SoundLevel_18.png */; };
 		B56C3F2C15B0267D00E7EB3F /* SoundLevel_19.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F0415B0267D00E7EB3F /* SoundLevel_19.png */; };
 		B56C3F2E15B0267D00E7EB3F /* SoundLevel_20.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F0515B0267D00E7EB3F /* SoundLevel_20.png */; };
-		B56C3F3B15B026AE00E7EB3F /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3215B026AE00E7EB3F /* Icon-Small.png */; };
-		B56C3F3D15B026AE00E7EB3F /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3315B026AE00E7EB3F /* Icon-Small@2x.png */; };
-		B56C3F3F15B026AE00E7EB3F /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3415B026AE00E7EB3F /* Icon.png */; };
-		B56C3F4115B026AE00E7EB3F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3515B026AE00E7EB3F /* Icon@2x.png */; };
 		B56C3F4315B026AE00E7EB3F /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F3615B026AE00E7EB3F /* iTunesArtwork.png */; };
 		B56C3F5715B0270A00E7EB3F /* compassWithoutNeedle.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F4515B0270A00E7EB3F /* compassWithoutNeedle.png */; };
 		B56C3F5915B0270A00E7EB3F /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = B56C3F4615B0270A00E7EB3F /* key.png */; };
@@ -88,7 +84,6 @@
 		B5B45DB813BA078B0062CE4C /* RecordingsFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B45DB613BA078B0062CE4C /* RecordingsFileViewController.xib */; };
 		B5B5F5BB13938CCE0053FD23 /* LockScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B5F5B913938CCE0053FD23 /* LockScreenViewController.m */; };
 		B5B5F5BC13938CCE0053FD23 /* LockScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5B5F5BA13938CCE0053FD23 /* LockScreenViewController.xib */; };
-		B5B6DF0C1A18C1FC004EE220 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B6DF0B1A18C1FC004EE220 /* Default-568h@2x.png */; };
 		B5B82C4C132508B5005D432D /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B82C4B132508B5005D432D /* Accelerometer.m */; };
 		B5B82C7413251271005D432D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B82C7313251271005D432D /* CoreMotion.framework */; };
 		B5B8E09B13BF2D2E006C44AB /* StreamingMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E09913BF2D2E006C44AB /* StreamingMainViewController.m */; };
@@ -175,10 +170,6 @@
 		B56C3F0315B0267D00E7EB3F /* SoundLevel_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SoundLevel_18.png; path = Assets/AudioLevelMeter/SoundLevel_18.png; sourceTree = "<group>"; };
 		B56C3F0415B0267D00E7EB3F /* SoundLevel_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SoundLevel_19.png; path = Assets/AudioLevelMeter/SoundLevel_19.png; sourceTree = "<group>"; };
 		B56C3F0515B0267D00E7EB3F /* SoundLevel_20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SoundLevel_20.png; path = Assets/AudioLevelMeter/SoundLevel_20.png; sourceTree = "<group>"; };
-		B56C3F3215B026AE00E7EB3F /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Assets/Icon-Small.png"; sourceTree = "<group>"; };
-		B56C3F3315B026AE00E7EB3F /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Assets/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		B56C3F3415B026AE00E7EB3F /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Assets/Icon.png; sourceTree = "<group>"; };
-		B56C3F3515B026AE00E7EB3F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Assets/Icon@2x.png"; sourceTree = "<group>"; };
 		B56C3F3615B026AE00E7EB3F /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Assets/iTunesArtwork.png; sourceTree = "<group>"; };
 		B56C3F4515B0270A00E7EB3F /* compassWithoutNeedle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compassWithoutNeedle.png; path = Assets/Icons/compassWithoutNeedle.png; sourceTree = "<group>"; };
 		B56C3F4615B0270A00E7EB3F /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = key.png; path = Assets/Icons/key.png; sourceTree = "<group>"; };
@@ -216,7 +207,6 @@
 		B5B5F5B813938CCE0053FD23 /* LockScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LockScreenViewController.h; sourceTree = "<group>"; };
 		B5B5F5B913938CCE0053FD23 /* LockScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LockScreenViewController.m; sourceTree = "<group>"; };
 		B5B5F5BA13938CCE0053FD23 /* LockScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LockScreenViewController.xib; sourceTree = "<group>"; };
-		B5B6DF0B1A18C1FC004EE220 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B5B82C4A132508B5005D432D /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Accelerometer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		B5B82C4B132508B5005D432D /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Accelerometer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		B5B82C7313251271005D432D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -320,11 +310,6 @@
 			children = (
 				B536D61C1A2B92D500ED37D2 /* Images.xcassets */,
 				B5118AB61A24D7F8008DF079 /* Settings.bundle */,
-				B5B6DF0B1A18C1FC004EE220 /* Default-568h@2x.png */,
-				B56C3F3215B026AE00E7EB3F /* Icon-Small.png */,
-				B56C3F3315B026AE00E7EB3F /* Icon-Small@2x.png */,
-				B56C3F3415B026AE00E7EB3F /* Icon.png */,
-				B56C3F3515B026AE00E7EB3F /* Icon@2x.png */,
 				B56C3F3615B026AE00E7EB3F /* iTunesArtwork.png */,
 				B555536C1381698000BAAC0A /* AudioLevelMeter */,
 				B56133F8137C2F7E00E40DE6 /* Icons */,
@@ -617,7 +602,6 @@
 				B56C3F0815B0267D00E7EB3F /* SoundLevel_1.png in Resources */,
 				B56C3F0A15B0267D00E7EB3F /* SoundLevel_2.png in Resources */,
 				B56C3F0C15B0267D00E7EB3F /* SoundLevel_3.png in Resources */,
-				B5B6DF0C1A18C1FC004EE220 /* Default-568h@2x.png in Resources */,
 				B56C3F0E15B0267D00E7EB3F /* SoundLevel_4.png in Resources */,
 				B56C3F1015B0267D00E7EB3F /* SoundLevel_5.png in Resources */,
 				B56C3F1215B0267D00E7EB3F /* SoundLevel_6.png in Resources */,
@@ -636,10 +620,6 @@
 				B56C3F2C15B0267D00E7EB3F /* SoundLevel_19.png in Resources */,
 				B536D61D1A2B92D500ED37D2 /* Images.xcassets in Resources */,
 				B56C3F2E15B0267D00E7EB3F /* SoundLevel_20.png in Resources */,
-				B56C3F3B15B026AE00E7EB3F /* Icon-Small.png in Resources */,
-				B56C3F3D15B026AE00E7EB3F /* Icon-Small@2x.png in Resources */,
-				B56C3F3F15B026AE00E7EB3F /* Icon.png in Resources */,
-				B56C3F4115B026AE00E7EB3F /* Icon@2x.png in Resources */,
 				B56C3F4315B026AE00E7EB3F /* iTunesArtwork.png in Resources */,
 				B56C3F5715B0270A00E7EB3F /* compassWithoutNeedle.png in Resources */,
 				B56C3F5915B0270A00E7EB3F /* key.png in Resources */,
