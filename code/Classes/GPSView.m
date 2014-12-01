@@ -194,7 +194,7 @@
 	
     } else {
 	
-        myCourse = [NSString stringWithFormat:@"Course:\t%.2f°", course];
+        myCourse = [NSString stringWithFormat:@"Course: %.2f°", course];
 	}
     
     //create the time string
