@@ -11,7 +11,7 @@ Please note that continued recording of mobile phone sensor data (especially GPS
 
 This application was inspired by previous work of Tobias Franke, David Bannach and Kai Kunze.
 
-<a href="https://itunes.apple.com/us/app/snsrlog/id545866871?mt=8&uo=4" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
+[![Download on the App Store](https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg)](https://itunes.apple.com/us/app/snsrlog/id545866871?mt=8&uo=4)
 
 ![LiveView1](iTunesConnect_Assets/github/0.PNG?raw=true "Live View 1")
 ![LiveView2](iTunesConnect_Assets/github/1.PNG?raw=true "Live View 2")
