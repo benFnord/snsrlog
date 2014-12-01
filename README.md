@@ -13,8 +13,8 @@ This application was inspired by previous work of Tobias Franke, David Bannach a
 
 <a href="https://itunes.apple.com/us/app/snsrlog/id545866871?mt=8&uo=4" target="itunes_store" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.png) no-repeat;width:135px;height:40px;@media only screen{background-image:url(https://linkmaker.itunes.apple.com/htmlResources/assets/en_us//images/web/linkmaker/badge_appstore-lrg.svg);}"></a>
 
-![LiveView1](iTunesConnect_Assets/4inch/0.PNG?raw=true "Live View 1")
-![LiveView2](iTunesConnect_Assets/4inch/1.PNG?raw=true "Live View 2")
-![Recording View](iTunesConnect_Assets/4inch/2.PNG?raw=true "Recording View")
-![Recordings View](iTunesConnect_Assets/4inch/3.PNG?raw=true "Recordings View")
-![Streaming View](iTunesConnect_Assets/4inch/4.PNG?raw=true "Streaming View")
+![LiveView1](iTunesConnect_Assets/github/0.PNG?raw=true "Live View 1")
+![LiveView2](iTunesConnect_Assets/github/1.PNG?raw=true "Live View 2")
+![Recording View](iTunesConnect_Assets/github/2.PNG?raw=true "Recording View")
+![Recordings View](iTunesConnect_Assets/github/3.PNG?raw=true "Recordings View")
+![Streaming View](iTunesConnect_Assets/github/4.PNG?raw=true "Streaming View")
